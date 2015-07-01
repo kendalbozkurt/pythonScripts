@@ -1,0 +1,13 @@
+from fabric.api import *
+host=prompt("enter your host(user@ip):",default="root@31.192.215.197") #like raw_input
+port=prompt("enter your port:")
+passwd=prompt("enter password:")
+env.hosts=host
+env.port=port
+env.password=passwd
+
+local_path=prompt("Which file would you like to upload?(path):")
+destination_path=prompt("And Where?:")
+
+def run():
+	put(local_path,destination_path,mode=0755)
