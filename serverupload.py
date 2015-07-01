@@ -1,5 +1,5 @@
 from fabric.api import *
-host=prompt("enter your host(user@ip):",default="*************") #like raw_input
+host=prompt("enter your host(user@ip):")#,default="*************") #like raw_input
 port=prompt("enter your port:")
 passwd=prompt("enter password:")
 env.hosts=host
