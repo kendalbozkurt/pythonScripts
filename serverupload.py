@@ -1,7 +1,8 @@
+import getpass
 from fabric.api import *
 host=prompt("enter your host(user@ip):")#,default="*************") #like raw_input
 port=prompt("enter your port:")
-passwd=prompt("enter password:")
+passwd=getpass.getpass()
 env.hosts=host
 env.port=port
 env.password=passwd
